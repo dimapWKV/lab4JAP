@@ -4,6 +4,19 @@
 
 using namespace std;
 
+// Прототипы
+void processArray(); //Первое задание
+void var13(); //Второе задание
+
+int main() {
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
+
+    // var13();
+    processArray();
+    return 0;
+}
+
 
 vector<int> FillArrayVector(int size){
     std::vector<int> mass = {};
@@ -179,12 +192,3 @@ void var13() {
     delete[] data;
 }
 
-
-int main() {
-    SetConsoleCP(CP_UTF8);
-    SetConsoleOutputCP(CP_UTF8);
-
-    // var13();
-    processArray();
-    return 0;
-}
