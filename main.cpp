@@ -23,9 +23,9 @@ vector<int> FillArrayVector(int size){
 
     for (int i = 0; i < size; i++)
     {
-        std::cout << "Введите " << i << " элемент массива: ";
+        cout << "Введите " << i << " элемент массива: ";
         int element;
-        std::cin >> element;
+        cin >> element;
         mass.push_back(element);
     }
 
@@ -47,7 +47,6 @@ void processArray() {
     cout << endl;
 
 
-    //Поиск максимального и минимального элемента
     int min_val = mass[0];
     int max_val = mass[0];
     int min_index = 0;
@@ -71,7 +70,7 @@ void processArray() {
     cout << "   Минимальный элемент: " << min_val
               << " (индекс " << min_index << ")" << endl;
 
-    //Перестановка местами максимального и минимального элемента
+    
     int temp = mass[min_index];
     mass[min_index] = mass[max_index];
     mass[max_index] = temp;
@@ -82,7 +81,7 @@ void processArray() {
     }
     cout << endl;
 
-    //Поиск количества различных элементов и их частоты
+    
     cout << "\n3. Количество различных элементов и их частота:" << endl;
 
     int different_count = 0;
@@ -90,7 +89,7 @@ void processArray() {
     for (int i = 0; i < mass.size(); i++) {
         bool already_counted = false;
 
-        // Проверяем, не встречался ли этот элемент раньше
+ 
         for (int j = 0; j < i; j++) {
             if (mass[i] == mass[j]) {
                 already_counted = true;
@@ -101,7 +100,6 @@ void processArray() {
 
         if (!already_counted) {
             int count = 1;
-            // Считаем сколько раз он встречается во всем массиве
             for (int k = i + 1; k < mass.size(); k++) {
                 if (mass[i] == mass[k]) {
                     count++;
@@ -113,8 +111,6 @@ void processArray() {
     }
 }
 
-
-//Второе задание
 double *FillArray(int size)
 {
     double *data = new double[size];
